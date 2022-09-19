@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2e2e2d;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 2px 6px 2px rgba(247, 53, 5, 0.8);
+}
+
+i.fa-bars {
+    color: #fff;
+}
+
+nav ul.desktop-nav {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav ul.desktop-nav li {
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+nav ul.desktop-nav li a {
+    text-decoration: none;
+    color: rgb(247, 53, 5);
+    transition: 0.3s ease-in;
+    padding: 10px;
+    letter-spacing: 4px;
+    margin: 0 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+nav ul.desktop-nav li a:hover {
+    background-color: rgb(247, 53, 5);
+    color: #fff;
+    transition: 0.3s ease-in;
+}
+
+.nav-btn, .open-btn, .nav {
+    display: none;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 8%;
+}
+
+.portrait img {
+    width: 500px;
+    margin: 0 30px;
+    /* margin: 100px 30px; */
+}
+
+.text {
+    color: #fff;
+    width: 60%;
+    padding: 20px;
+}
+
+.text span {
+    color: rgb(247, 53, 5);
+}
+
+.download {
+    display: inline;
+}
+
+.download button {
+    width: 20%;
+    padding: 5px;
+    margin: 10px 20px 10px 0;
+}
+
+i {
+    margin: 0 3px;
+    font-size: 16px;
+    padding: 3px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.download button:hover i {
+    color: rgb(247, 53, 5);
+    transition: 0.3s ease-in-out;
+}
+
+.download button:active {
+    transform: scale(0.95);
+}
+
+.social-media-container {
+    display: flex;
+    padding: 20px 0;
+}
+
+.social-media-icons i {
+    color: #fff;   
+    font-size: 24px; 
+    margin: 10px 20px 0 0;
+    padding: 10px 20px 0 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-media-icons i:hover {
+    color: rgb(247, 53, 5);
+    transition: 0.3 ease-in-out;
+}
+
+
+
+
+
+
+
+
+.logo .logoTextFirst {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 13%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo .logoTextSecond {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 19%;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 10px;
+}
+
+#heart{
+    width: 50px;
+    display: inline;
+    stroke: rgb(247, 53, 5);
+    fill: rgb(209, 102, 69);
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    stroke-dasharray: 54;
+    stroke-dashoffset: 54;
+}
+    
+    
+    
+    @keyframes HeartAnimation1
+    {
+      0% {
+        stroke-dashoffset: 54;
+        fill: rgb(209, 102, 69);
+      }
+      70% {
+        stroke-dashoffset: 0;
+        fill: rgb(214, 65, 19);
+      }
+      100% {
+        stroke-dashoffset: 0;
+        fill: rgb(247, 53, 5);
+      }
+    
+    }
+    
+    
+    
+    @keyframes Beat {
+    0%
+    {
+    transform: scale(1, 1);
+    }
+    
+    50%
+    {
+    transform: scale(0.9, 0.9);
+    }
+    
+    100%
+    {
+    transform: scale(1, 1);
+    }
+    
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 800px) {
+    nav ul.desktop-nav {
+        display: none;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    .nav-btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 20px;
+        display: block;
+    }
+    
+    .open-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px; 
+        display: block;    
+    }
+    
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);      /* To have it start off the screen */
+        transition: transform 0.3s ease-in-out;
+        display: block;
+    }
+    
+    .nav.visible {          /* If it has a class of visible, then bring it to the screen */
+        transform: translateX(0);
+    }
+    
+    .nav-black {
+        background-color: rgb(34, 31, 31);
+        width: 60%;
+        max-width: 480px;
+        min-width: 320px;
+        transition-delay: 0.4s;
+    }
+    
+    .nav-black.visible {    /* If the nav-black has a class of visible, then remove the transition delay */
+        transition-delay: 0s;
+    }
+    
+    .nav-orange {
+        background-color: rgb(247, 53, 5);
+        width: 95%;
+        transition-delay: 0.2s;
+    }
+    
+    .nav-orange.visible {
+        transition-delay: 0.2s;   
+    }
+    
+    .nav-white {
+        background-color: #fff;
+        width: 95%;
+        padding: 40px;
+        position: relative;
+        transition-delay: 0s;
+    }
+    
+    .nav-white.visible {
+        transition-delay: 0.4s;        /* When it opens, it should have a 0.4s delay */
+    }
+    
+    .close-btn {
+        opacity: 0.3;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+    
+    .nav-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .nav-list li {
+        margin: 20px 0;
+    }
+    
+    .nav-list li a {
+        color: rgb(34, 31, 31);
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in;
+    }
+
+    .nav-list li a:hover {
+        color: rgb(247, 53, 5);
+        font-size: 16px;
+        margin-left: 2px;
+        transition: all 0.3s ease-in;
+    }
+
+    #heart {
+        display: none;
+    }
+
+    .logo .logoTextFirst, .logo .logoTextSecond {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .portrait img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .download button {
+        width: 45%;
+        padding: 5px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
