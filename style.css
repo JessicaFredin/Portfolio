@@ -137,15 +137,62 @@ i {
 .social-media-icons i:hover {
     color: rgb(247, 53, 5);
     font-size: 26px;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-/* 
+
 .footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 300px;
     background-color: #000;
     margin-top: 20%;
     box-shadow: 0 2px 6px 6px rgba(247, 53, 5, 0.8);
-} */
+}
+
+.footer-contact {
+    color: #fff;
+}
+
+.footer-contact h1 {
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+
+.contact-icons {
+    width: 250px;
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-contact .contact-icons a {
+    margin: 10px;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    text-decoration: none;
+}
+
+.footer-contact .contact-icons i {
+    color: rgb(247, 53, 5);
+    margin-right: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.footer-contact .contact-icons a:hover {
+    color: rgb(247, 53, 5);
+    transition: all 0.3s ease-in;
+}
+
+.footer-contact .contact-icons i:hover {
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+
 
 
 
@@ -399,8 +446,20 @@ i {
     .social-media-icons i:hover {
         color: rgb(247, 53, 5);
         font-size: 22px;
-        transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
+
+    .footer-contact h1 {
+        font-size: 18px;
+    }
+    
+    .footer-contact .contact-icons a {
+        font-size: 14px;
+    }
+    
+    .footer-contact .contact-icons i {
+        font-size: 14px;
+    } 
 }
 
 
@@ -409,8 +468,6 @@ i {
      width: 35%;
    }
 }
-
-
 
 
 
